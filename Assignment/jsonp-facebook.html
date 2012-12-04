@@ -2,56 +2,78 @@
 <html>
 <head>
 <title>Facebook JSONP</title>
-	
+	<link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="container">
 	<script type="text/template" id="fb-page-template">
 		<div class="facebook-page">
-			<img src = "{{data.0.pic_square}}">
-			<h1>{{ data.0.name }}</h1>
-			<p>Total Likes: <span>{{ data.0.fan_count }}</span></p>
-			<p>Website: <span>{{ data.0.page_url }}</span></p>
-			<p>About: <span>{{ data.0.description}}</span></p>
-			
+			<img id="img" src="{{pic_square}}">
+			<h1>{{ name }}</h1>
+			<p>Total Likes: <span>{{ fan_count }}</span></p>
+			<p>Website: <span>{{ page_url }}</span></p>
+			<p>About: <span>{{ description }}</span></p>
+			<a href='#'; class="more-info">More Info</a>
+			<div class="more">
+				<p>  Genre: {{ genre }} </p>
+			</div>
+			<hr />
 		</div>
+		
+	</script>
+		<!--
 		<div class="facebook-page">
-			<img src = "{{data.1.pic_square}}">
+			<img id="img" src = "{{data.1.pic_square}}">
 			<h1>{{ data.1.name }}</h1>
 			<p>Total Likes: <span>{{ data.1.fan_count }}</span></p>
 			<p>Website: <span>{{ data.1.page_url }}</span></p>
 			<p>About: <span>{{ data.1.about}}</span></p>
-			
+			<div class="more-info">
+				More Info
+			</div>
 		</div>
+		<hr />
 		<div class="facebook-page">
-			<img src = "{{data.2.pic_square}}">
+			<img id="img" src = "{{data.2.pic_square}}">
 			<h1>{{ data.2.name }}</h1>
 			<p>Total Likes: <span>{{ data.2.fan_count }}</span></p>
 			<p>Website: <span>{{ data.2.page_url }}</span></p>
 			<p>About: <span>{{ data.2.about}}</span></p>
-			
+			<div class="more-info">
+				More Info
+			</div>
 		</div>
+		<hr />
 		<div class="facebook-page">
-			<img src = "{{data.3.pic_square}}">
+			<img id="img" src = "{{data.3.pic_square}}">
 			<h1>{{ data.3.name }}</h1>
 			<p>Total Likes: <span>{{ data.3.fan_count }}</span></p>
 			<p>Website: <span>{{ data.3.page_url }}</span></p>
 			<p>About: <span>{{ data.3.about}}</span></p>
-			
+			<div class="more-info">
+				More Info
+			</div>
 		</div>
+		<hr />
 		<div class="facebook-page">
-			<img src = "{{data.4.pic_square}}">
+			<img id="img" src = "{{data.4.pic_square}}">
 			<h1>{{ data.4.name }}</h1>
 			<p>Total Likes: <span>{{ data.4.fan_count }}</span></p>
 			<p>Website: <span>{{ data.4.page_url }}</span></p>
 			<p>About: <span>{{ data.4.about}}</span></p>
-			
+			<div class="more-info">
+				More Info
+			</div>
 		</div>
 	</script>
 
-	<div id="fb-page"></div>
-</div>
+-->
 
+	<div id="fb-page"></div>
+	
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 <script src="handlebars-1.0.rc.1.js"></script>
 <script src="jsonp-facebook.js"></script>
 
